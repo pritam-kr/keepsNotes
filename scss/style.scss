@@ -5,10 +5,30 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(61, 107, 206); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 $bg-color: rgba(0, 0, 0, 0.089);
 $primary-color: rgb(61, 107, 206);
 $secondary-color: rgba(54, 141, 175, 0.445);
-$border-color: rgba(0, 0, 0, 0.164);
+$border-color: rgba(0, 0, 0, 0.089);
 
 body{
     background-color: $bg-color;
@@ -49,6 +69,7 @@ body{
 
 .notes-container .left{
     padding: 20px ;
+    overflow-y: scroll;
 }
 .notes-container .notes{
     width: 100%;
@@ -138,19 +159,69 @@ body{
     padding: 10px;
    
 }
+
+
 .box-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .box-container .notes-box{
-    width: 300px;
+    width: 350px;
     max-width: 80%;
     border: 0.5px solid $border-color;
-    height: 200px;
-    
+    height: auto;
     border-radius: 10px;
     cursor: pointer;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     margin: 10px 0;
+    background-color: rgba(61, 107, 206, 0.322);
+}
+.notes-box .notes-box-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px;
+}
+.notes-box .text-area{
+    padding:  0px 10px 10px 10px;
+}
+// .notes-box .tools{
+//     // padding: 10px;
+//     // display: flex;
+//     // align-items: flex-start;
+//     // justify-content: center;
+// }
+.notes-box .tools button{
+    background: transparent;
+    padding:10px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: small;
+    border: 0.5px solid $border-color;
+    border-radius: 3px;
+}
+// .notes-box .notes-content{
+//     //  padding: 10px ;
+// }
+.notes-box .notes-content h3{
+    color: $primary-color;
+    font-size: 1.3rem;
+}
+.notes-box .text-area p{
+    font-size: 1.2rem;
+}
+.notes-list{
+    padding: 0px 18px 0 18px;
+    margin: 20px 0;
+    overflow-y: scroll;
+    // background-color: red;
+}
+.notes-list ul li{
+    font-size: 1.2rem;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 0.5px solid $border-color;
 }
