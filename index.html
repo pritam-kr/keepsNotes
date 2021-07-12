@@ -5,11 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Pritam Kumar">
-    <link rel="stylesheet" href="/scss/style.scss">
+    <link rel="stylesheet" href="/scss/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Keeps Notes</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo"><i class="fas fa-clipboard"></i> <span>Notes</span></div>
+                <div class="toggle">
+                    <i class="fas fa-toggle-on"></i>
+                </div>
+            </nav> 
+
+            <div class="notes-container">
+                <div class="box left">
+                    <div class="notes">
+                        <i class="fas fa-pen"></i> <span>My Notes</span>
+                    </div>
+                </div>
+                <div class="box right">
+                    <div class="input-container">
+                        <div class="input-notes">
+                            <input type="text" id="title" placeholder="Title" autofocus>
+                            <textarea id="textarea" placeholder="Write your notes"></textarea>
+                        </div>
+
+                      <div class="btn-add-new">
+                        <button class="new-note"> <i class="fas fa-pen"></i> New note</button>
+                      </div>
+
+                    </div>
+
+                    <div class="notes-box-container">
+                        <div class="box-container">
+                            <!-- <div class="notes-box">
+                                <h3>I have to go school</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptatem.</p>
+                            </div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script/app.js"></script>
 </body>
 </html>
