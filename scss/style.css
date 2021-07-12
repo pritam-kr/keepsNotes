@@ -220,6 +220,12 @@ body {
   overflow-x: hidden;
   margin: 10px 0;
   background-color: rgba(61, 107, 206, 0.322);
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+.done-task {
+  background-color: rgba(0, 128, 0, 0.623) !important;
 }
 
 .notes-box .notes-box-header {
@@ -232,26 +238,42 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  background-color: #3d6bce;
 }
 
 .notes-box .text-area {
-  padding: 0px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.notes-box .tools {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .notes-box .tools button {
   background: transparent;
   padding: 10px;
   cursor: pointer;
-  margin: 5px;
   font-size: small;
   border: 0.5px solid rgba(0, 0, 0, 0.089);
   border-radius: 3px;
+  background-color: #fff;
+  color: #3d6bce;
+  margin: 3px;
 }
 
 .notes-box .notes-content h3 {
-  color: #3d6bce;
+  color: #fff;
   font-size: 1.3rem;
+  padding: 10px;
 }
 
 .notes-box .text-area p {

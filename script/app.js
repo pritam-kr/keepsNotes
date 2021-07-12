@@ -7,7 +7,13 @@ const inputContainer = document.querySelector('.input-container');
 const btnTrach = document.querySelector('.box-container');
 
 btnTrach.addEventListener('click', (e)=>{
-    console.log(e.target.classList[2])
+    // console.log(e.target.parentElement.parentElement.classList)
+    if(e.target.parentElement.parentElement.classList[0] === "tools"){
+    
+    //    console.log( e.target.parentElement.parentElement.parentElement.classList)
+
+       e.target.parentElement.parentElement.parentElement.classList.add('done-task')
+    }
 })
 
 
@@ -22,6 +28,7 @@ btnAdd.addEventListener('click', (e) =>{
     notesList(inputTitle.value)
 
     const noteBox = document.createElement('div')
+  
     noteBox.classList.add('notes-box')
     noteBox.innerHTML = `
     
@@ -54,3 +61,4 @@ function notesList(e){
     noteList.innerHTML = e;
     document.querySelector('.note-ul').appendChild(noteList)
 }
+
