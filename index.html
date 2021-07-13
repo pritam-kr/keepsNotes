@@ -14,9 +14,16 @@
         <div class="container">
             <nav class="nav">
                 <div class="logo"><i class="fas fa-clipboard"></i> <span>Notes</span></div>
-                <div class="toggle">
-                    <i class="fas fa-toggle-on"></i>
-                </div>
+
+                <label class="theme-switch-wrapper">
+                    <div class="theme-switch">
+                      <input
+                        type="checkbox"
+                        class="toggle-theme-checkbox"
+                        aria-label="toggle theme"
+                      />
+                      <div class="slider round"></div>
+                    </label>
             </nav> 
 
             <div class="notes-container">
@@ -58,5 +65,6 @@
         </div>
     </div>
     <script src="script/app.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>

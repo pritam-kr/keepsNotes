@@ -25,10 +25,10 @@
     background: #555; 
   }
 
-$bg-color: rgba(0, 0, 0, 0.089);
+$bg-color: rgba(0, 0, 0, 0.24);
 $primary-color: rgb(61, 107, 206);
 $secondary-color: rgba(54, 141, 175, 0.445);
-$border-color: rgba(0, 0, 0, 0.089);
+$border-color: rgba(0, 0, 0, 0.274);
 
 body{
     background-color: $bg-color;
@@ -112,11 +112,11 @@ body{
 }
 .input-notes{
     width: 80%;
-    border: 0.5px solid $border-color;
+    // border: 0.5px solid $border-color;
     border-radius: 10px;
 }
 .input-notes input{
-    padding: 13px 20px 5px 20px;
+    padding: 10px 20px 10px 20px;
     font-size: 1.5rem;
     margin-bottom: 10px;
     // background-color: rgba(61, 107, 206, 0.253);
@@ -131,6 +131,8 @@ body{
     padding: 5px 20px;
     border-radius: 10px;
     border: none;
+    font-size: 1.2rem;
+    height: 80px;
 }
 .input-notes textarea:focus{
     outline: none;
@@ -170,7 +172,7 @@ body{
     width: 350px;
     max-width: 80%;
     border: 0.5px solid $border-color;
-    height: auto;
+    // height: auto;
     border-radius: 10px;
     cursor: pointer;
     overflow-y: scroll;
@@ -193,7 +195,7 @@ body{
     // color: #fff !important;
 }
 .notes-box .text-area{
-    padding:  10px 10px 10px 10px;
+    padding: 10px;
 }
 .notes-box .tools{
      padding: 10px;
@@ -235,8 +237,11 @@ body{
     font-size: 1.2rem;
     list-style-type: none;
     margin: 10px 0;
-    padding: 5px;
-    border-bottom: 0.5px solid $border-color;
+    padding: 5px 10px;
+    // border-bottom: 0.5px solid $border-color;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 @media(max-width: 997px){
@@ -253,3 +258,4 @@ body{
     }
 
 }
+
