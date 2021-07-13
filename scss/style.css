@@ -70,7 +70,6 @@ body {
 .notes-container .box {
   border: 1px solid rgba(0, 0, 0, 0.089);
   border-radius: 10px;
-  background-color: #fff;
 }
 
 .notes-container .left {
@@ -219,7 +218,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 10px 0;
-  background-color: rgba(61, 107, 206, 0.322);
+  background-color: #fff;
   -webkit-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
@@ -260,7 +259,7 @@ body {
 
 .notes-box .tools button {
   background: transparent;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   font-size: small;
   border: 0.5px solid rgba(0, 0, 0, 0.089);
@@ -292,5 +291,20 @@ body {
   margin: 10px 0;
   padding: 5px;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.089);
+}
+
+@media (max-width: 997px) {
+  .btn-add-new span {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .notes-container .left {
+    display: none;
+  }
+  .notes-container {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

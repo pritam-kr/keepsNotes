@@ -2,17 +2,17 @@ const inputTitle = document.querySelector('#title');
 const textArea = document.querySelector('#textarea');
 const btnAdd = document.querySelector('.new-note')
 
+
 const inputContainer = document.querySelector('.input-container');
 
 const btnTrach = document.querySelector('.box-container');
 
 btnTrach.addEventListener('click', (e)=>{
-    // console.log(e.target.parentElement.parentElement.classList)
-    if(e.target.parentElement.parentElement.classList[0] === "tools"){
-    
-    //    console.log( e.target.parentElement.parentElement.parentElement.classList)
-
+   
+    if(e.target.classList[1] === "fa-check"){
        e.target.parentElement.parentElement.parentElement.classList.add('done-task')
+    }else if(e.target.classList[2]=== "btn-trash"){
+        e.target.parentElement.parentElement.parentElement.parentElement.style.display = "none"
     }
 })
 
@@ -52,13 +52,25 @@ btnAdd.addEventListener('click', (e) =>{
 
     inputTitle.value = ''
     textArea.value = ''
+   
 })
 
 // making list of notes
 
 function notesList(e){
     const noteList = document.createElement('li');
+    noteList.classList.add('list-li')
     noteList.innerHTML = e;
     document.querySelector('.note-ul').appendChild(noteList)
 }
+
+const myNoteList = document.querySelector('.notes-list');
+myNoteList.addEventListener('click', (ele) =>{
+    console.log(ele.target.classList[0])
+    if(ele.target.classList[0] === "list-li"){
+        document.querySelector('.box-container').style.display = "none";
+
+
+    }
+})
 
